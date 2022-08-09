@@ -12,15 +12,17 @@ intents.messages = True
 client = discord.Client(intents=intents)
 tree = discord.app_commands.CommandTree(client)
 
+
 class GenreGen:
-    tpl_re = re.compile(r'\{(.*?)\}')
+    tpl_re = re.compile(r"\{(.*?)\}")
 
     TEMPLATE = [
         "{TOP_GENRE}",
         "{TOP_GENRE}",
         "{QUALIFIER} {TOP_GENRE}",
         "{QUALIFIER} {TOP_GENRE}",
-        "{QUALIFIER} {QUALIFIER} {TOP_GENRE}"
+        "{PREFIX}-{TOP_GENRE}",
+        "{QUALIFIER} {QUALIFIER} {TOP_GENRE}",
     ]
 
     TOP_GENRE = [
@@ -33,7 +35,7 @@ class GenreGen:
         "Electro-{GENRE}",
         "Lo-fi {GENRE}",
         "Avant-{GENRE}",
-        "Prog-{GENRE}"
+        "Prog-{GENRE}",
     ]
 
     QUALIFIER = [
@@ -51,6 +53,7 @@ class GenreGen:
         "Indie",
         "Alternative",
         "Progressive",
+        "Contemporary",
         "Hard",
         "Euphoric",
         "Acid",
@@ -70,7 +73,10 @@ class GenreGen:
         "Symphonic",
         "Anarchist",
         "Hardcore",
-        "Ska"
+        "Ska",
+        "Deep",
+        "Raw",
+        "Pretty"
     ]
 
     PREFIX = [
@@ -111,10 +117,13 @@ class GenreGen:
         "Trip",
         "Doom",
         "Sludge",
-        "Death"
+        "Death",
         "Groove",
         "Pirate",
-        "Emo"
+        "Emo",
+        "Vocaloid",
+        "Void",
+        "Turbo"
     ]
 
     GENRE = [
@@ -157,13 +166,16 @@ class GenreGen:
         "Grunge",
         "Djent",
         "Noise",
+        "Polka",
+        "Humppa",
+        "Rhythm"
     ]
 
     @classmethod
     def generate_genre(cls):
         genre = random.choice(cls.TEMPLATE)
         cache = {}
-        while (match := cls.tpl_re.search(genre)):
+        while match := cls.tpl_re.search(genre):
             choices = set(getattr(cls, match.group(1)))
             choices -= cache.get(match.group(1), set())
             choice = random.choice(list(choices))
@@ -183,9 +195,9 @@ async def genre(interaction: discord.Interaction):
         title=GenreGen.generate_genre().upper(),
     )
     return await interaction.response.send_message(
-        "Consider writing some...",
-        embed=embed
+        "Consider writing some...", embed=embed
     )
+
 
 @client.event
 async def on_ready():
