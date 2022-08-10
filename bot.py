@@ -76,7 +76,9 @@ class GenreGen:
         "Ska",
         "Deep",
         "Raw",
-        "Pretty"
+        "Pretty",
+        "Jazzy",
+        "Classic",
     ]
 
     PREFIX = [
@@ -123,7 +125,12 @@ class GenreGen:
         "Emo",
         "Vocaloid",
         "Void",
-        "Turbo"
+        "Turbo",
+        "Forest",
+        "Speed",
+        "Anime",
+        "Art",
+        "Study"
     ]
 
     GENRE = [
@@ -132,6 +139,23 @@ class GenreGen:
         "{CORE_GENRE}{CORE_GENRE}",
         "{PREFIX} {CORE_GENRE}",
         "{PREFIX} {CORE_GENRE}",
+        "{CORE_GENRE}",
+        "{CORE_GENRE}",
+        "{CORE_GENRE}{CORE_GENRE}",
+        "{PREFIX} {CORE_GENRE}",
+        "{PREFIX} {CORE_GENRE}",
+        "{CORE_GENRE}",
+        "{CORE_GENRE}",
+        "{CORE_GENRE}{CORE_GENRE}",
+        "{PREFIX} {CORE_GENRE}",
+        "{PREFIX} {CORE_GENRE}",
+        "{CORE_GENRE}",
+        "{CORE_GENRE}",
+        "{CORE_GENRE}{CORE_GENRE}",
+        "{PREFIX} {CORE_GENRE}",
+        "{PREFIX} {CORE_GENRE}",
+        "{CORE_GENRE}core",
+        "{PREFIX}core",
         "{CORE_GENRE}core",
         "{PREFIX}core",
         "{PREFIX}-hop",
@@ -142,6 +166,8 @@ class GenreGen:
         "{PREFIX}tronica",
         "{CORE_GENRE}abilly",
         "{PREFIX}abilly",
+        "{CORE_GENRE}step",
+        "{PREFIX}step",
     ]
     CORE_GENRE = [
         "Hip-hop",
@@ -168,7 +194,11 @@ class GenreGen:
         "Noise",
         "Polka",
         "Humppa",
-        "Rhythm"
+        "Rhythm",
+        "Boogie",
+        "Phonk",
+        "Fusion",
+        "Experimental"
     ]
 
     @classmethod
