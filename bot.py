@@ -133,7 +133,7 @@ class GenreGen:
         "Study"
     ]
 
-    GENRE = [
+    GENRE = ([
         "{CORE_GENRE}",
         "{CORE_GENRE}",
         "{CORE_GENRE}{CORE_GENRE}",
@@ -164,10 +164,11 @@ class GenreGen:
         "{PREFIX}gaze",
         "{CORE_GENRE}tronica",
         "{PREFIX}tronica",
-        "{CORE_GENRE}abilly",
-        "{PREFIX}abilly",
         "{CORE_GENRE}step",
         "{PREFIX}step",
+    ] * 2) + [
+        "{CORE_GENRE}abilly",
+        "{PREFIX}abilly",
     ]
     CORE_GENRE = [
         "Hip-hop",
