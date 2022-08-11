@@ -166,7 +166,7 @@ class GenreGen:
         "{PREFIX}tronica",
         "{CORE_GENRE}step",
         "{PREFIX}step",
-    ] * 2) + [
+    ] * 4) + [
         "{CORE_GENRE}abilly",
         "{PREFIX}abilly",
     ]
