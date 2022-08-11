@@ -154,6 +154,7 @@ class GenreGen:
         "{CORE_GENRE}{CORE_GENRE}",
         "{PREFIX} {CORE_GENRE}",
         "{PREFIX} {CORE_GENRE}",
+    ] * 2) + ([
         "{CORE_GENRE}core",
         "{PREFIX}core",
         "{CORE_GENRE}core",
