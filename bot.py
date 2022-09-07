@@ -30,6 +30,8 @@ class GenreGen:
         "{GENRE}",
         "{GENRE}",
         "{GENRE}",
+        "{GENRE}",
+        "{GENRE}",
         "Nu-{GENRE}",
         "Post-{GENRE}",
         "Electro-{GENRE}",
@@ -52,6 +54,9 @@ class GenreGen:
         "Downtempo",
         "Indie",
         "Alternative",
+        "Acoustic",
+        "Bittersweet",
+        "Cozy",
         "Progressive",
         "Contemporary",
         "Hard",
@@ -82,6 +87,10 @@ class GenreGen:
     ]
 
     PREFIX = [
+        "Bird",
+        "Acoustic",
+        "Blanket",
+        "Carly",
         "Clown",
         "Bedroom",
         "Bard",
@@ -130,47 +139,61 @@ class GenreGen:
         "Speed",
         "Anime",
         "Art",
-        "Study"
+        "Study",
     ]
 
-    GENRE = ([
-        "{CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}{CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}{CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}{CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}",
-        "{CORE_GENRE}{CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-        "{PREFIX} {CORE_GENRE}",
-    ] * 2) + ([
-        "{CORE_GENRE}core",
-        "{PREFIX}core",
-        "{CORE_GENRE}core",
-        "{PREFIX}core",
-        "{PREFIX}-hop",
-        "{CORE_GENRE}wave",
-        "{PREFIX}wave",
-        "{PREFIX}gaze",
-        "{CORE_GENRE}tronica",
-        "{PREFIX}tronica",
-        "{CORE_GENRE}step",
-        "{PREFIX}step",
-    ] * 4) + [
-        "{CORE_GENRE}abilly",
-        "{PREFIX}abilly",
-    ]
+    GENRE = (
+        (
+            [
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}{CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}{CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}{CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}",
+                "{CORE_GENRE}{CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+                "{PREFIX} {CORE_GENRE}",
+            ]
+            * 2
+        )
+        + (
+            [
+                "{CORE_GENRE}core",
+                "{PREFIX}core",
+                "{CORE_GENRE}core",
+                "{PREFIX}core",
+                "{PREFIX}-hop",
+                "{CORE_GENRE}wave",
+                "{PREFIX}wave",
+                "{PREFIX}gaze",
+                "{CORE_GENRE}tronica",
+                "{PREFIX}tronica",
+                "{CORE_GENRE}step",
+                "{PREFIX}step",
+            ]
+            * 4
+        )
+        + [
+            "{CORE_GENRE}abilly",
+            "{PREFIX}abilly",
+        ]
+    )
     CORE_GENRE = [
         "Hip-hop",
         "Rock",
@@ -200,7 +223,9 @@ class GenreGen:
         "Boogie",
         "Phonk",
         "Fusion",
-        "Experimental"
+        "Experimental",
+        "Folk",
+        "Singer-Songwriter",
     ]
 
     @classmethod
